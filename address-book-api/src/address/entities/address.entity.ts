@@ -2,19 +2,28 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class AddressEntity {
-  @PrimaryGeneratedColumn
-  @Column
+
+  @PrimaryGeneratedColumn()
+  @Column()
   id: number;
 
-  @Column
+  @Column()
   addressLine: string;
 
-  @Column
+  @Column()
   postCode: string;
 
-  @Column
+  @Column()
   state: string;
 
-  @Column
+  @Column()
   createdDate: Date;
+
+  constructor(id: number, addressLine: string, postCode: string, state: string, createdDate: Date) {
+    this.id = id;
+    this.addressLine = addressLine;
+    this.postCode = postCode;
+    this.state = state;
+    this.createdDate = createdDate;
+  }
 }

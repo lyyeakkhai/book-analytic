@@ -14,7 +14,9 @@ import { CreateAddressDto } from './dto/create-address.dto';
 import { UpdateAddressDto } from './dto/update-address.dto';
 import { ParseIntPipe } from '@nestjs/common';
 import { AddressDto } from './dto/addressDto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Address')
 @Controller('address')
 export class AddressController {
   constructor(private readonly addressService: AddressService) {}
