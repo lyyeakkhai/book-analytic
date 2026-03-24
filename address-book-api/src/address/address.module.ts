@@ -6,4 +6,5 @@ import { AddressController } from './address.controller';
   controllers: [AddressController],
   providers: [AddressService],
 })
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class AddressModule {}
